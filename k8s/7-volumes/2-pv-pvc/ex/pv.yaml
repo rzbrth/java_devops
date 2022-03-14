@@ -10,5 +10,5 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: "/home/vagrant/mypv"  
+    path: "/home/docker/mysql"  
 

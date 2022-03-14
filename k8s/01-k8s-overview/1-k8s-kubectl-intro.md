@@ -12,11 +12,10 @@ $ kubectl cluster-info
 $ echo $KUBECONFIG
 $ kubectl config view   # show context: users, clusters & contexts
 
-$ export KUBECONFIG=~/.kube/config:~/.kube/configs/sunitp-k8s.conf
 $ kubectl config view
 $ kubectl config get-contexts
 $ kubectl config current-context
-$ kubectl config set-context sunitp@kubernetes
+$ kubectl config set-context rajib@kubernetes
 ```
 
 ### kubectl commands to interact with 3 node cluster

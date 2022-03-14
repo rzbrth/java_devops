@@ -14,6 +14,9 @@ $ watch kubectl get pods -o wide
 
 ```s
 $ kubectl get pods
+# To check Yaml file syntax and do a dry run use below command
+$ kubectl create -f hello-pod.yaml --dry-run=client
+
 $ kubectl apply -f nginx.yaml
 $ kubectl apply -f mysql-pod.yaml
 $ kubectl apply -f hello-pod.yaml
@@ -65,5 +68,21 @@ $ cat /usr/share/nginx/html/index.html
 # get into one specific container 2nd
 $ kubectl exec multi-container -c 2nd -it -- bash
 $ cat /html/index.html
+
+```
+
+### Run pod directly without yaml
+```s
+# Run pod directly
+$ kubectl run demo --image=http
+# Get yaml from pod directly
+$ kubectl get pod demo -o yaml
+
+# Get documentation for varipus resourses
+$ kubectl explain pod
+$ kubectl explain rs
+$ kubectl explain rs.status
+
+
 
 ```
